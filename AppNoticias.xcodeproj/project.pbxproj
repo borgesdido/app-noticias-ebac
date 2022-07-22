@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,12 @@
 		096B2C19285A7D5400C5DC96 /* file.json in Resources */ = {isa = PBXBuildFile; fileRef = 096B2C18285A7D5400C5DC96 /* file.json */; };
 		096B2C26285A7FD400C5DC96 /* NewYorkNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096B2C25285A7FD400C5DC96 /* NewYorkNews.swift */; };
 		096B2C2B285CC50C00C5DC96 /* NewYorkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096B2C2A285CC50C00C5DC96 /* NewYorkTableViewCell.swift */; };
+		099E8CB82889D9B800BDF001 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 099E8CB72889D9B800BDF001 /* GoogleService-Info.plist */; };
+		099E8CD32889E26200BDF001 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 099E8CD22889E26200BDF001 /* FirebaseAuth */; };
+		099E8CD82889F6D200BDF001 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099E8CD72889F6D200BDF001 /* SignUpViewController.swift */; };
+		099E8CDD2889F72A00BDF001 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099E8CDC2889F72A00BDF001 /* ProfileViewController.swift */; };
+		099E8CE32889FC7D00BDF001 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099E8CE22889FC7D00BDF001 /* Utils.swift */; };
+		099E8CE9288A0C3C00BDF001 /* Alert+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099E8CE8288A0C3C00BDF001 /* Alert+Extension.swift */; };
 		09F2BA8F28652B9700631683 /* NetworkManagers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F2BA8E28652B9700631683 /* NetworkManagers.swift */; };
 		09F2BA9728652C5200631683 /* NewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F2BA9628652C5200631683 /* NewsData.swift */; };
 /* End PBXBuildFile section */
@@ -61,6 +67,11 @@
 		096B2C18285A7D5400C5DC96 /* file.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = file.json; sourceTree = "<group>"; };
 		096B2C25285A7FD400C5DC96 /* NewYorkNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewYorkNews.swift; sourceTree = "<group>"; };
 		096B2C2A285CC50C00C5DC96 /* NewYorkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewYorkTableViewCell.swift; sourceTree = "<group>"; };
+		099E8CB72889D9B800BDF001 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		099E8CD72889F6D200BDF001 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		099E8CDC2889F72A00BDF001 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		099E8CE22889FC7D00BDF001 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		099E8CE8288A0C3C00BDF001 /* Alert+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+Extension.swift"; sourceTree = "<group>"; };
 		09F2BA8E28652B9700631683 /* NetworkManagers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagers.swift; sourceTree = "<group>"; };
 		09F2BA9628652C5200631683 /* NewsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				099E8CD32889E26200BDF001 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +130,8 @@
 				096B2BE12859427A00C5DC96 /* SceneDelegate.swift */,
 				096B2BE32859427A00C5DC96 /* MainTableViewController.swift */,
 				090DDBFA285FA9FF00F0C27E /* LoginViewController.swift */,
+				099E8CD72889F6D200BDF001 /* SignUpViewController.swift */,
+				099E8CDC2889F72A00BDF001 /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -145,11 +159,13 @@
 		096B2BDE2859427A00C5DC96 /* AppNoticias */ = {
 			isa = PBXGroup;
 			children = (
+				099E8CE12889FC4D00BDF001 /* Helpers */,
 				090DDBF0285FA2FD00F0C27E /* Controller */,
 				090DDBEF285FA2F700F0C27E /* View */,
 				090DDBEE285FA2F000F0C27E /* Model */,
 				096B2BEB2859427C00C5DC96 /* Assets.xcassets */,
 				096B2BF02859427C00C5DC96 /* Info.plist */,
+				099E8CB72889D9B800BDF001 /* GoogleService-Info.plist */,
 				096B2BE82859427A00C5DC96 /* AppNoticias.xcdatamodeld */,
 			);
 			path = AppNoticias;
@@ -173,6 +189,15 @@
 			path = AppNoticiasUITests;
 			sourceTree = "<group>";
 		};
+		099E8CE12889FC4D00BDF001 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				099E8CE22889FC7D00BDF001 /* Utils.swift */,
+				099E8CE8288A0C3C00BDF001 /* Alert+Extension.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -189,6 +214,9 @@
 			dependencies = (
 			);
 			name = AppNoticias;
+			packageProductDependencies = (
+				099E8CD22889E26200BDF001 /* FirebaseAuth */,
+			);
 			productName = AppNoticias;
 			productReference = 096B2BDC2859427A00C5DC96 /* AppNoticias.app */;
 			productType = "com.apple.product-type.application";
@@ -260,6 +288,9 @@
 				Base,
 			);
 			mainGroup = 096B2BD32859427A00C5DC96;
+			packageReferences = (
+				099E8CD12889E26200BDF001 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 096B2BDD2859427A00C5DC96 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -278,6 +309,7 @@
 			files = (
 				096B2BEF2859427C00C5DC96 /* LaunchScreen.storyboard in Resources */,
 				096B2C19285A7D5400C5DC96 /* file.json in Resources */,
+				099E8CB82889D9B800BDF001 /* GoogleService-Info.plist in Resources */,
 				096B2BEC2859427C00C5DC96 /* Assets.xcassets in Resources */,
 				096B2BE72859427A00C5DC96 /* Main.storyboard in Resources */,
 			);
@@ -305,14 +337,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				09F2BA8F28652B9700631683 /* NetworkManagers.swift in Sources */,
+				099E8CE9288A0C3C00BDF001 /* Alert+Extension.swift in Sources */,
 				090DDBFB285FA9FF00F0C27E /* LoginViewController.swift in Sources */,
 				096B2C26285A7FD400C5DC96 /* NewYorkNews.swift in Sources */,
 				096B2BE42859427A00C5DC96 /* MainTableViewController.swift in Sources */,
+				099E8CD82889F6D200BDF001 /* SignUpViewController.swift in Sources */,
 				096B2BE02859427A00C5DC96 /* AppDelegate.swift in Sources */,
+				099E8CDD2889F72A00BDF001 /* ProfileViewController.swift in Sources */,
 				096B2BE22859427A00C5DC96 /* SceneDelegate.swift in Sources */,
 				096B2BEA2859427A00C5DC96 /* AppNoticias.xcdatamodeld in Sources */,
 				096B2C2B285CC50C00C5DC96 /* NewYorkTableViewCell.swift in Sources */,
 				09F2BA9728652C5200631683 /* NewsData.swift in Sources */,
+				099E8CE32889FC7D00BDF001 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,6 +681,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		099E8CD12889E26200BDF001 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = exactVersion;
+				version = 9.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		099E8CD22889E26200BDF001 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 099E8CD12889E26200BDF001 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		096B2BE82859427A00C5DC96 /* AppNoticias.xcdatamodeld */ = {
