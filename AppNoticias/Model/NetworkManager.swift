@@ -7,55 +7,52 @@
 
 import Foundation
 
-enum resultNewsError: Error {
+enum ResultNewsError: Error {
     case badURL, noData, invalidJSON
 }
 
-class NetWorkManager {
-   
-    static let shared = NetWorkManager()
+class NetworkManager {
     
-    struct Constans {
+    static let shared = NetworkManager()
+    
+    struct Constants {
         static let newsAPI = URL(string: "https://web-ebac-ios.herokuapp.com/home")
     }
     
     private init() { }
-
-    func getNews(completion: @escaping (Result<[ResultNews], resultNewsError>) -> Void) {
+    
+    func getNews(completion: @escaping (Result<[ResultNews], ResultNewsError>) -> Void) {
         
-        // setup the URL
-        guard let url = Constans.newsAPI else {
+        // Setup the url
+        guard let url = Constants.newsAPI else {
             completion(.failure(.badURL))
             return
-            
         }
-        //create a configuration
-        let configuration = URLSessionConfiguration.default
-        
-        configuration.allowsCellularAccess = true
-        configuration.allowsExpensiveNetworkAccess = true
-        configuration.allowsConstrainedNetworkAccess = true
 
-        //create a session
+        // Create a configuration
+        let configuration = URLSessionConfiguration.default
+
+        // Create a session
         let session = URLSession(configuration: configuration)
-        
-        //create the task
-        let task = session.dataTask(with: url) { ( data, response, error) in
+
+        // Create the task
+        let task = session.dataTask(with: url) { (data, response, error) in
             guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200, let data = data else {
                 completion(.failure(.invalidJSON))
                 return
             }
+            
             do {
                 let decoder = JSONDecoder()
                 let result = try decoder.decode(ResponseElement.self, from: data)
                 completion(.success(result.home.results))
             } catch {
-                print ("Error info \(error.localizedDescription)")
+                print("Error info: \(error.localizedDescription)")
                 completion(.failure(.noData))
             }
         }
+        
         task.resume()
     }
     
 }
-

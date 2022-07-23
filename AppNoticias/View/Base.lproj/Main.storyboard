@@ -218,7 +218,7 @@
                                                     <action selector="loginPressed:" destination="EWd-Hy-c0t" eventType="touchUpInside" id="sep-Ki-IAC"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Esqueceu sua senha?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="raQ-Xc-z0a">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="É novo? Registre-se" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="raQ-Xc-z0a">
                                                 <rect key="frame" x="0.0" y="45" width="394" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="PEa-Nq-wqT"/>

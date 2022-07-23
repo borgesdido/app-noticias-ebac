@@ -190,3 +190,5 @@ enum Source: String, Codable {
 enum ResultType: String, Codable {
     case article = "Article"
 }
+
+
